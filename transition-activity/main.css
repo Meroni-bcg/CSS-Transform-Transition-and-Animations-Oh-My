@@ -6,13 +6,20 @@ body  {
 }
 
 .caption {
-  width: 80%;
+  width: 100%;
   margin: auto;
   overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  
 }
 
+.caption:hover .caption-overlay {
+  transform: translateY(0)
+}
 img {
   width: 80%;
+
 }
 
 button {
@@ -24,4 +31,28 @@ button {
 
 button:hover {
   background-color: cornflowerblue;
+}
+
+.caption-overlay {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+padding: 15px;
+color: rgb(185, 248, 234);
+transform: translateY(100%);
+transition: transform .60s ease-out;
+}
+
+/*.title-overlay {
+  margin:0;
+  padding: 0, 0, 10px;
+  transform: translateY(calc(-100%-10px)) ;
+  transition: transform .60s ease-out;
+} */
+.content-overlay {
+  text-align: center;
+  margin-left: 5em;
+  margin-right: 5em;
 }
